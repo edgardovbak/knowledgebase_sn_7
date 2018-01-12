@@ -1,0 +1,109 @@
+﻿.tagcloud {
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+
+	&__field {
+		width: 100%;
+		font-size: 1.125rem !important;
+		box-sizing: border-box;
+		padding: 0.3125rem;
+		font-family: $font_base !important;
+	}
+
+	&__used {
+		padding: 0.3125rem 0.3125rem 0;
+		box-sizing: border-box;
+		border: 1px solid #27d3d2;
+
+		legend {
+			font-size: rem(16);
+			padding: 0 rem(5);
+		}
+	}
+
+	label {
+		margin: rem(20) 0 rem(5);
+		display: block;
+	}
+
+	&__choisen {
+		display: inline-block;
+		margin-bottom: 5px;
+		background-color: $white;
+		color: $brown;
+		border: 1px solid $gray;
+		padding: rem(3);
+		margin-right: rem(5);
+		font-size: rem(14);
+	}
+}
+
+.tagcloud__list li {
+    display: inline-block;
+    background-color: #888;
+    margin-right: 5px;
+    padding: 3px;
+    color: #fff;
+    margin-bottom: 5px;
+
+	&:nth-of-type(1n+70):not(.equal):not(.used) {
+		display: none;
+	}
+}
+
+.tagcloud__choisen_remove {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+	padding: rem(2);
+	background-color: $brown;
+	color: $white;
+	border: 1px solid $gray;
+	text-align: center;
+	font-size: rem(9) !important;
+
+	span {
+		text-indent: -9999px;
+		display: inline-block;
+	}
+}
+
+.tagcloud__list {
+    margin: rem(10) 0 0 0;
+    font-size:rem(15);
+    padding-top: 5px;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    transition: all .2s ease;
+	font-family: $font_base !important;
+	padding: rem(5) rem(5) 0;
+    box-sizing: border-box;
+    border: 1px solid #27d3d2;
+}
+
+.tagcloud__list li {
+    cursor: pointer;
+    order: 2;
+}
+
+.tagcloud__list li.equal {
+    background-color: $brown;
+    order: 1;
+	color: $white;
+	border:  1px solid $white;
+}
+
+.tagcloud__list li.used {
+    background-color: $cofee;
+    order: 1;
+	color: $white;
+	border:  1px solid $white;
+}

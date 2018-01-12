@@ -1,0 +1,27 @@
+﻿$browser-context: 16; // Default font size
+
+@function em($pixels) {
+    @return $pixels / $browser-context * 1em;
+}
+
+
+@function rem($pixels) {
+    @return $pixels / $browser-context * 1rem;
+}
+/* hide visual*/
+
+@mixin  sr_only() {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    left: -1000em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+@mixin  page_content_wrapper($max_width) {
+    padding: 0 0.9375rem;
+    margin: 0 auto;
+    max-width: $max_width;
+}

@@ -1,0 +1,52 @@
+﻿
+/*  CONTENT */
+
+/*
+    1. header
+    2. footer
+    3. main
+    4. fonts
+    5. global
+    6. sidebar
+    7. tablet 
+	8. modal  
+    9. new article
+    10. tagcloud
+	11. slick
+*/
+
+@import 'scss/variables';
+@import 'scss/mixins';
+@import 'scss/normalize';
+/* fonts */
+@import 'scss/fonts';
+/* global */
+@import 'scss/global'; 
+
+/* header */
+@import 'scss/header'; 
+/* footer */
+@import 'scss/footer';
+/* main */
+@import 'scss/main';
+/* sidebar */
+@import 'scss/sidebar';
+/* tags */
+@import 'scss/tags';
+/* article */
+@import 'scss/article';
+/* new article*/
+@import 'scss/newArticle.scss';
+/* tagcloud*/
+@import 'scss/tagcloud.scss';
+/* pagination */
+@import 'scss/pagination'; 
+/* modal */
+@import 'scss/modal'; 
+/* notification */
+@import 'scss/notification'; 
+
+/* tablet */
+@import 'scss/tablet';
+
+@import 'scss/shame';

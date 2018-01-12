@@ -1,0 +1,96 @@
+﻿.notification_table  {
+	width: 100%;
+    border-collapse: collapse;
+	border:  1px solid $light_brown2;
+	margin-bottom: rem(20);
+
+	th {
+		color: $white;
+		background-color: $light_brown2;
+		padding: 10px 5px;
+		text-align: left;
+	}
+
+	td {
+		padding: 5px;
+	}
+
+	tr:nth-child(odd) {
+		background-color: $arange;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+
+		.btn {
+			width: 100%;
+		}
+	}
+}
+
+.notification_info {
+	background-color:  $yellow;
+	font-size: rem(12);
+	padding: rem(10);
+	margin-bottom: rem(20);
+	display: flex;
+
+	span {
+		color: $white;
+		font-size: rem(24);
+
+		&:before {
+			padding-right: rem(10);
+		}
+	}
+}
+
+.notification_field {
+	border-bottom: 1px solid $light_brown2;
+	padding-bottom: 1rem;
+	margin-bottom: rem(32);
+
+	&__title {
+		font-size: rem(18);
+		color : $gray;
+		padding-bottom: rem(5);
+		margin: 0;
+		margin-top: rem(32);
+	}
+
+	&__desc {
+		font-size: rem(11);
+		color: $brown;
+		font-family: $font_second;
+		margin-bottom: rem(16);
+	}
+
+	&__options {
+		padding-left: rem(36);
+
+		label {
+			display: flex;
+			flex-wrap: nowrap;
+			margin-bottom: rem(10);
+		}
+
+		span {
+			display: block;
+		}
+
+		&__title {
+			font-size: rem(14);
+			color: $gray;
+			font-weight:  600;
+			padding-bottom: rem(5);
+		}
+
+		&__desc {
+			font-size: rem(12);
+			color: $brown;
+			font-family: $font_second;
+			font-weight:  300;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Site</ContentType>
+  <ContentName>KnowledgeBaseSn7</ContentName>
+  <Fields>
+    <DisplayName><![CDATA[KnowledgeBaseSn7]]></DisplayName>
+    <Language>en</Language>
+    <EnableClientBasedCulture>false</EnableClientBasedCulture>
+    <EnableUserBasedCulture>false</EnableUserBasedCulture>
+    <UrlList><Url authType='Forms'>kb_sn7</Url></UrlList>
+    <LoginPage>
+      <Path>/Root/Sites/KnowledgeBaseSn7/login</Path>
+    </LoginPage>
+    <IsActive>true</IsActive>
+    <IsWallContainer>false</IsWallContainer>
+    <IsCritical>false</IsCritical>
+    <Manager />
+    <Deadline>0001-01-01T00:00:00</Deadline>
+    <DenyCrossSiteAccess>false</DenyCrossSiteAccess>
+    <Description><![CDATA[]]></Description>
+    <Owner>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </Owner>
+    <Hidden>false</Hidden>
+    <Index>0</Index>
+    <EnableLifespan>false</EnableLifespan>
+    <ValidFrom>0001-01-01T00:00:00</ValidFrom>
+    <ValidTill>0001-01-01T00:00:00</ValidTill>
+    <CreatedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </CreatedBy>
+    <CreationDate>2018-01-11T08:28:08.74</CreationDate>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2018-01-11T09:38:48.81</ModificationDate>
+    <TrashDisabled>false</TrashDisabled>
+    <IsTaggable>false</IsTaggable>
+    <IsRateable>false</IsRateable>
+    <RateAvg>0.0000</RateAvg>
+    <RateCount>0</RateCount>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

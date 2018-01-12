@@ -1,0 +1,32 @@
+﻿<ContentType name="KnowledgeBaseArticle_v_2" parentType="ListItem" handler="SenseNet.KnowledgeBase.KnowledgeBaseArticle" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>Knowledge Base Article</DisplayName>
+  <Description>Content type for representing knowledgebase articles and blog posts.</Description>
+  <Icon>Content</Icon>
+  <AllowIncrementalNaming>true</AllowIncrementalNaming>
+  <Fields>
+    <Field name="Body" type="LongText">
+      <DisplayName>Body</DisplayName>
+      <Description>Body</Description>
+      <Indexing>
+        <Analyzer>Lucene.Net.Analysis.Standard.StandardAnalyzer</Analyzer>
+      </Indexing>
+      <Configuration>
+        <ControlHint>sn:RichText</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="Labels" type="LongText">
+      <DisplayName>Labels</DisplayName>
+      <Description>List labels separated by ' ; '</Description>
+      <Indexing>
+        <Analyzer>Lucene.Net.Analysis.Standard.StandardAnalyzer</Analyzer>
+      </Indexing>
+      <Configuration>
+        <ControlHint>kb:Labels</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="OriginalAuthor" type="ShortText">
+      <DisplayName>Original author</DisplayName>
+      <Description>The name of the author as migrated from old isonet database</Description>
+    </Field>
+  </Fields>
+</ContentType>

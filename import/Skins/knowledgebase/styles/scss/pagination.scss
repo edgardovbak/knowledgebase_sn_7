@@ -1,0 +1,47 @@
+﻿.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+        margin : 0 .3em 0.5em;
+    }
+
+    a,
+    span {
+        display: block;
+        border: 1px solid $blue;
+        padding: 0 .7em;
+        line-height: 2em;
+        color: $blue;
+        border-radius: 1em;
+
+        &:not(.disabled):hover,
+        &:not(.disabled):focus,
+        &:not(.disabled):active,
+        &:not(.disabled).active {
+            background-color: $blue;
+            color: $white;
+            border: 1px solid $white;
+        }
+
+    }
+
+    .disabled {
+        border: none;
+    }
+
+    &__buttons {
+
+        a,
+        span {
+            color: $white;
+            background-color: $cian;
+            border: 1px solid $cian;
+
+            &:not(.disabled):hover {
+                border: 1px solid $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+﻿<% String snLang = SenseNet.Portal.Virtualization.PortalContext.Current.Site.Language; %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+ <head>
+     <link rel="shortcut icon" href="/Root/Skins/knowledgebase/images/favicon.ico" />
+   <title>
+		<%= SenseNet.Portal.Virtualization.PortalContext.Current.ContextNode.DisplayName %>
+   </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400|Roboto:400,700" rel="stylesheet">
+ </head>
+<body>
+
+	<sn:cssrequest csspath="$skin/styles/jqueryui/jquery-ui.css" id="pageTemplateUIStyleReq" runat="server" />
+	<sn:CssRequest CSSPath="$skin/styles/jqueryui/jquery-ui-sntheme.css" ID="pageTemplateUIStyleReq2" runat="server" />
+	<sn:cssrequest csspath="$skin/styles/sn-layout.css" id="snLayoutCss" runat="server" />
+
+	<!-- THEME Styles -->
+	<sn:cssrequest csspath="/Root/Skins/knowledgebase/styles/knowledgebase.css" ID="pageTemplateStyleReq" runat="server" />
+
+
+	<!-- SIDEBAR -->
+	<asside class="sidebar">
+		<button class="mobile_menu js-toggle_mobile_menu" aria-label="Open/Close Menu" aria-haspopup="true" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<div class="sidebar__overlay">
+			<snpe-zone name="Sidebar" HeaderText="Sidebar" PartChromeType="TitleAndBorder" />
+		</div>
+	</asside>
+
+	<!-- CONTETN -->
+	<div class="content" role="main">
+
+		<!-- HEADER -->
+		<snpe-zone name="Header" HeaderText="Header" PartChromeType="TitleAndBorder" />
+		<!-- END header -->
+
+		<div class="content__wrapper">
+			<div class="content__wrapper_grid">
+
+				<!-- ARTICLE -->
+				<snpe-zone name="Article" HeaderText="Article" PartChromeType="TitleAndBorder" />
+
+			</div><!-- END content__wrapper_grid -->
+		</div><!-- END content__wrapper -->
+	</div><!-- END content -->
+	<!-- Background for mobile menu -->
+	<div class="js-overlay overlay_bg"></div>
+
+
+
+	<!-- PRC -->
+	<sn:PortalRemoteControl ID="PRC" runat="server" Groups="/Root/IMS/Builtin/Portal/Editors;PortalBuilders;Demo\ProjectManagers" />
+
+	<!-- Init js -->
+	<sn:ScriptRequest Path="/Root/Global/scripts/init.js" ID="request2" runat="server" />
+
+	<!-- THEME Scripts -->
+	<sn:ScriptRequest Path="/Root/Skins/knowledgebase/scripts/knowledgebase.js" ID="request1" runat="server" />
+
+</body>
+</html>

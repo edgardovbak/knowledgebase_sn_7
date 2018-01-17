@@ -1,4 +1,4 @@
-﻿// must bz the same as in template (data-koef)
+// must bz the same as in template (data-koef)
 var COMMENT_SHOW = 10;
 var MORE_COMMENTS = 50;
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
 		}
 	});
 
-	//search start 
+	//search start
 	$('.js-do_search').on('click', function () {
 
 	});
@@ -123,12 +123,63 @@ $(document).ready(function () {
 		$('body').removeClass('open_menu');
 	});
 
-	// Article Create/Edit *********************************************************************
+	// fullscreen
+	$(document).on('click', '.post__text a', function (e) {
+		if ($(this).find('img').length > 0) {
+			e.preventDefault();
+			var fullsize_url = $(this).attr('href');
+			$('.js-full_size').addClass('open_modal').find('img').attr("src", fullsize_url);
+			$('body, html').addClass('no_scroll');
+		}
+	});
+
+	// show real size from image in modal
+	$(document).on('click', '.post__text img', function () {
+		// get the image url with original size
+		var fullsize_url = $(this).attr('src');
+		// open modal
+		$('.js-full_size').addClass('open_modal').find('img').attr("src", fullsize_url);
+		// remove scroll from body
+		$('body, html').addClass('no_scroll').attr("tabindex", -1);
+	});
+
+	// close modal window
+	$('.js-close_modal, .js-full_size').on('click', function (e) {
+		e.preventDefault();
+		// close modal window
+		$(this).closest('.js-modal').removeClass('open_modal');
+		// add scroll to the body
+		$('body, html').removeClass('no_scroll').attr("tabindex", 0);
+	});
+
+	// modal window accesibility
+	$(document).keydown(function (e) {
+		if ($('.js-modal.open_modal').length > 0) {
+			if (e.keyCode == 27) {
+				$('.js-modal.open_modal').find('.js-close_modal').click();
+			}
+
+			if (e.keyCode == 9) {
+				var focus = $(":focus");
+				if (focus.closest('.js-modal').length == 0) {
+					$('.js-modal.open_modal').focus();
+				}
+
+			}
+		}
+	});
+
+	// image size and position modal window
+	$('.js-range_img_size').on('input', function () {
+		$(this).next().text($(this).val() + " %");
+	});
+
+	// END modal window ******************************************************************
 
 	if ($('.js-tagcloud').length > 0) {
 		var tag_list = $('.js-tagcloud').attr('data-list').split(",");
 
-		// if post have some labels then 
+		// if post have some labels then
 		var Used_tags_list;
 		if ($('.js-tagsfield').length > 0) {
 			// get list of used tags and convert to array
@@ -153,7 +204,7 @@ $(document).ready(function () {
 			tags_list += $(tags[i]).attr('data-value') + ";";
 		}
 
-		// remove the last symbol from string with tags list. 
+		// remove the last symbol from string with tags list.
 		tags_list = tags_list.substring(0, tags_list.length - 1)
 
 		$('.js-tagsfield').val(tags_list);
@@ -170,18 +221,30 @@ $(document).ready(function () {
 		$(this).closest('.dropdown').toggleClass('open_dropdown');
 	});
 
-	$(document).on("hover", '.dropdown', function () {
-	}, function () {
-		$(this).removeClass('open_dropdown');
+	$(document).on('click', '.dropdown li a', function (e) {
+		$(this).closest('.dropdown').toggleClass('open_dropdown');
 	});
 
-	// manage posts actions 
+	var hideInterval;
+	$(document).on({
+		mouseenter: function () {
+			clearInterval(hideInterval);
+		},
+		mouseleave: function () {
+			var dd = $(this);
+			hideInterval = setTimeout(function () {
+				dd.removeClass('open_dropdown');
+			}, 5000);
+		}
+	}, '.dropdown');
+
+	// manage posts actions
 	var post_for_delete;
 
 	// delete post action
 	$(document).on('click', '.js-delete_post', function (e) {
 		e.preventDefault();
-		// show modal 
+		// show modal
 		$('.js-delete_post_modal').addClass('open_modal');
 		// post id that is deleted
 		post_for_delete = $(this).closest('.js-post_id');
@@ -201,7 +264,7 @@ $(document).ready(function () {
 				post_for_delete.remove();
 			},
 			error: function () {
-				console.log('Problem with connection'); // error message 
+				console.log('Problem with connection'); // error message
 			}
 		});
 		post_path_for_remove = "";

@@ -20,7 +20,7 @@
         	one: "lucene"
         },
 
-    	// text 
+    	// text
         used_text: "Choisen tags",
         avalible_text: "List of avalible tags. Click on tag to use it.",
 		input_text : "Enter the name of the tag that you search or add new tag",
@@ -149,7 +149,7 @@
         div.on('click','.js-remove_tag',function() {
             $(this).parent().remove();
             var index = $(this).data('index');
-            div.find('li[data-index='+ index +']').removeClass('used');
+            div.find('li[data-index="'+ index +'"]').removeClass('used');
             config.removeTag(this); // callback after remove tag
         });
 
@@ -171,7 +171,7 @@
     	// add tags to used tags list
         $.each(config.data_used, function (index, used) {
         	var result = $.trim(used).replace(/ /g, "_");
-        	div.find('li[data-value=' + $.trim(result) + ']').click();
+        	div.find('li[data-value="' + $.trim(result) + '"]').click();
         });
     }
 

@@ -1,10 +1,21 @@
-# sn_knowledgeBase v0.1
+# sn_knowledgeBase v0.1.1
 
 ## What is that?
 
 This theme was created with SenseNet ECM [sense.net](https://www.sensenet.com/).
 To this package was added basic options to manage, search, comments articles.
 Using knowledge template base you can create a simple blog.
+
+## Chang log
+
+	- Add pictures to article
+	- Manage pictures size and position
+	
+This option you can  find when add new or edit article.
+Press "Upload Image" button choos files and press "Upload". Close dialog window.
+All  pictures that was added can find under the Editor.
+Click on image and in dialog window choos size (%) and position in article. And press "Yes" button.
+
 
 ## How it work?
 
@@ -25,7 +36,6 @@ Done.
 
 In this version you can only add, edit and delete articles.
 Planned to add more options like:
-	- Pictures in article
 	- Tags
 	- Labels
 	- Search

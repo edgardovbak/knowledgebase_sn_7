@@ -18,6 +18,7 @@
     <Deadline>0001-01-01T00:00:00</Deadline>
     <DenyCrossSiteAccess>false</DenyCrossSiteAccess>
     <Description><![CDATA[]]></Description>
+    <AllowedChildTypes>Folder Image CustomList SmartFolder SystemFolder Page KnowledgeBaseArticle_v_2</AllowedChildTypes>
     <Owner>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </Owner>
@@ -42,5 +43,8 @@
   </Fields>
   <Permissions>
     <Clear />
+    <Identity path="/Root/IMS/BuiltIn/Portal/Visitor">
+      <See>Allowed</See>
+    </Identity>
   </Permissions>
 </ContentMetaData>

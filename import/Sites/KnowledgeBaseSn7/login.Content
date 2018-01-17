@@ -46,7 +46,7 @@
     <ModifiedBy>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </ModifiedBy>
-    <ModificationDate>2017-11-22T13:53:15.73</ModificationDate>
+    <ModificationDate>2018-01-12T07:59:27.76</ModificationDate>
     <TrashDisabled>false</TrashDisabled>
     <IsTaggable>false</IsTaggable>
     <IsRateable>false</IsRateable>
@@ -55,5 +55,12 @@
   </Fields>
   <Permissions>
     <Clear />
+    <Identity path="/Root/IMS/BuiltIn/Portal/Visitor">
+      <See>Allowed</See>
+      <Preview>Allowed</Preview>
+      <PreviewWithoutWatermark>Allowed</PreviewWithoutWatermark>
+      <PreviewWithoutRedaction>Allowed</PreviewWithoutRedaction>
+      <Open>Allowed</Open>
+    </Identity>
   </Permissions>
 </ContentMetaData>

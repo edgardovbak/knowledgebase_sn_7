@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="SenseNet.Portal.Portlets.ContentCollectionView" %>
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="SenseNet.Portal.Portlets.ContentCollectionView" %>
 <%@ Import Namespace="System.Linq" %>
 <%@ Import Namespace="SenseNet.Portal.Portlets" %>
 <%@ Import Namespace="SenseNet.Portal.Helpers" %>
@@ -23,7 +23,7 @@
 
 <script type="text/html" id="post_template">
     <! if (data.length == 0){ !>
-	
+
     <div>
         No posts found for this search.
     </div>
@@ -53,7 +53,7 @@
 				<%--Post Creation  date--%>
                 <div class="post__info">
                     <span class="post__info_date">
-						<! 
+						<!
 							var dateP = new Date(item.CreationDate);
 							var localDate = new Date(dateP.getTime() + dateP.getTimezoneOffset() * 60000);
 							var options = {
@@ -68,7 +68,7 @@
 							};
 						!>
 						<!= localDate.toLocaleString("hu", options) !>
-                    </span> 
+                    </span>
 					<div class="dropdown">
 						<button class="btn btn--info js-manage_article">manage</button>
 						<ul>
@@ -79,17 +79,15 @@
 								<a href="<!=item.BrowseUrl !>" class="js-delete_post">Delete</a>
 							</li>
 						</ul>
-					</div>                     
-					
+					</div>
+
                 </div>
 				<%--Post title--%>
                 <h2 class="post__title">
                     <a href="<!=item.BrowseUrl !>"><!=item.DisplayName !></a>
                 </h2>
 				<%--Post text--%>
-                <div class="post__text">
-                    <!= item.Body !>
-                </div>
+                <div class="post__text"><!= item.Body !></div>
             </div>
         </div>
     </article>
@@ -99,7 +97,7 @@
 
 <script type="text/html" id="paginationTemplate">
 	<ul class="pagination">
-		<!	
+		<!
 			function getQueryVariable(variable) {
 				   var query = window.location.search.substring(1);
 				   var vars = query.split("&");
@@ -119,7 +117,7 @@
 					return uri + separator + key + "=" + value;
 				}
 			}
-			
+
 			var pageCapacity = document.getElementById("target").getAttribute("data-pagecount");
 			var pageCount = Math.ceil(pagination/pageCapacity);
 			var activePage = parseInt(getQueryVariable("page"));
@@ -168,7 +166,7 @@
 			<! if ( activePage >= 4 & activePage <= pageCount-3 ) { !>
 				<li class="pagination__numbers">
 					<a href="/">1</a>
-				</li>		
+				</li>
 				<li class="pagination__numbers">
 					<span class="disabled">...</span>
 				</li>
@@ -192,7 +190,7 @@
 			<! if ( activePage > pageCount-3 ) { !>
 				<li class="pagination__numbers">
 					<a href="/">1</a>
-				</li>		
+				</li>
 				<li class="pagination__numbers">
 					<span class="disabled">...</span>
 				</li>
@@ -218,3 +216,36 @@
 		</li>
 	</ul>
 </script>
+
+<%-- .js-modal is a global class for all modals --%>
+<%-- .js-full_size is just for funtions that works with full screen img --%>
+<div class="modal js-full_size js-modal" role="dialog" tabindex="0">
+	<div class="table_cu">
+		<div class="table_cu__cell">
+			<img src="" alt="ful size picture" />
+			<button class="btn btn--round close js-close_modal">
+				<i class="fi flaticon-delete"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal js-modal js-delete_post_modal" role="dialog" tabindex="0">
+	<div class="table_cu">
+		<div class="table_cu__cell">
+			<button class="btn btn--round close js-close_modal">
+				<i class="fi flaticon-delete"></i>
+			</button>
+			<div class="modal__body">
+				<div class="modal__header">
+					are sure about that?
+				</div>
+				<div class="modal__buttons">
+					<button class="btn js-finish_delete_post btn--remove">yes</button>
+					<button class="btn js-close_modal">no</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

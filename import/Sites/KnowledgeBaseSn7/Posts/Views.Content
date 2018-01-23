@@ -1,27 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentMetaData>
-  <ContentType>Resource</ContentType>
-  <ContentName>NotificationResources.xml</ContentName>
+  <ContentType>SystemFolder</ContentType>
+  <ContentName>Views</ContentName>
   <Fields>
-    <Binary attachment="NotificationResources.xml" />
-    <DisplayName><![CDATA[NotificationResources.xml]]></DisplayName>
-    <ModifiedBy>
-      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
-    </ModifiedBy>
-    <ModificationDate>2016-05-06T11:02:43.72</ModificationDate>
-    <PageCount>-4</PageCount>
+    <DisplayName><![CDATA[Views]]></DisplayName>
     <Owner>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </Owner>
     <Hidden>false</Hidden>
-    <Index>10</Index>
+    <Index>0</Index>
     <EnableLifespan>false</EnableLifespan>
     <ValidFrom>0001-01-01T00:00:00</ValidFrom>
     <ValidTill>0001-01-01T00:00:00</ValidTill>
     <CreatedBy>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </CreatedBy>
-    <CreationDate>2016-05-06T11:02:43.72</CreationDate>
+    <CreationDate>2017-11-22T14:00:48.32</CreationDate>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2017-11-22T14:00:48.32</ModificationDate>
     <TrashDisabled>false</TrashDisabled>
     <IsTaggable>false</IsTaggable>
     <IsRateable>false</IsRateable>

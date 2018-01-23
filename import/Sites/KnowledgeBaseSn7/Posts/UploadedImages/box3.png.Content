@@ -1,27 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentMetaData>
-  <ContentType>File</ContentType>
-  <ContentName>slick.css</ContentName>
+  <ContentType>Image</ContentType>
+  <ContentName>box3.png</ContentName>
   <Fields>
-    <Binary attachment="slick.css" />
-    <DisplayName><![CDATA[slick.css]]></DisplayName>
+    <DateTaken>0001-01-01T00:00:00</DateTaken>
+    <Index>0</Index>
+    <Binary attachment="box3.png" />
+    <DisplayName><![CDATA[box3.png]]></DisplayName>
     <ModifiedBy>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </ModifiedBy>
-    <ModificationDate>2017-11-21T12:57:56.65</ModificationDate>
+    <ModificationDate>2018-01-12T13:05:27.33</ModificationDate>
     <PageCount>-4</PageCount>
     <Owner>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </Owner>
     <Hidden>false</Hidden>
-    <Index>0</Index>
     <EnableLifespan>false</EnableLifespan>
     <ValidFrom>0001-01-01T00:00:00</ValidFrom>
     <ValidTill>0001-01-01T00:00:00</ValidTill>
     <CreatedBy>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </CreatedBy>
-    <CreationDate>2017-11-21T12:57:56.65</CreationDate>
+    <CreationDate>2018-01-12T13:05:27.32</CreationDate>
     <TrashDisabled>false</TrashDisabled>
     <IsTaggable>false</IsTaggable>
     <IsRateable>false</IsRateable>

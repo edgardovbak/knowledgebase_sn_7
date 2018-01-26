@@ -58,6 +58,9 @@
 	<!-- Init js -->
 	<sn:ScriptRequest Path="/Root/Global/scripts/init.js" ID="request2" runat="server" />
 
+	<sn:ScriptRequest Path="/Root/Global/scripts/jquery.signalR-2.2.2.min.js" ID="signalR" runat="server" />
+	<sn:scriptrequest id="hub" runat="server" path="/signalr/hubs" />
+
 	<!-- THEME Scripts -->
 	<sn:ScriptRequest Path="/Root/Skins/knowledgebase/scripts/knowledgebase.js" ID="request1" runat="server" />
 

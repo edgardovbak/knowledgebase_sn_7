@@ -7,7 +7,6 @@
     <Language>en</Language>
     <EnableClientBasedCulture>false</EnableClientBasedCulture>
     <EnableUserBasedCulture>false</EnableUserBasedCulture>
-    <UrlList><Url authType='Forms'>kb_sn7</Url></UrlList>
     <LoginPage>
       <Path>/Root/Sites/KnowledgeBaseSn7/login</Path>
     </LoginPage>

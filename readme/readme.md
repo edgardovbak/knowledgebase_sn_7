@@ -10,7 +10,7 @@ Using knowledge template base you can create a simple blog.
 
 	- Add pictures to article
 	- Manage pictures size and position
-	
+
 This option you can  find when add new or edit article.
 Press "Upload Image" button choose files and press "Upload". Close dialog window.
 All  pictures that was added can find under the Editor.
@@ -22,7 +22,7 @@ Click on image and in dialog window choose size (%) and position in article. And
 1. Instal Senese.net How to  install sensenet you can [find here](http://wiki.sensenet.com/How_to_install_Sense/Net)
 2. Download this theme
 3. Copy files from bin folder in package and paste to path_to_project/.../Site name/Admin/bin
-4. Add to the Web.config, that you can find in path_to_project/.../Site name/Admin/bin  folder, and add to "<sensenet>" element this 
+4. Add to the Web.config, that you can find in path_to_project/.../Site name/Admin/bin  folder, and add to "<sensenet>" element this
 ``` xml
 <portalSettings>
       <add key="AllowCssBundling" value="false" />
@@ -39,7 +39,7 @@ Click on image and in dialog window choose size (%) and position in article. And
 With this options you can use tinyMCE editor to manage articles.
 5. Import downloaded package.
 	- Run  command line
-	- Go in to path_to_project/source/Sensenet/WebSite/Admin/bin
+	- Go in to path_to_project/source/.../Site name/Admin/bin
 	- Write
   ```
   SnAdmin import source:"localrepo\import" target:"/Root/"

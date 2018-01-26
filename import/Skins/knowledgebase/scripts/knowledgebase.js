@@ -238,6 +238,13 @@ $(document).ready(function () {
 		}
 	}, '.dropdown');
 
+	$(document).on("click", function (e) {
+		var target = $(e.target);
+		if (target.closest('.dropdown').length == 0) {
+			$('.dropdown').removeClass('open_dropdown');
+		}
+	});
+
 	// manage posts actions
 	var post_for_delete;
 
@@ -272,4 +279,248 @@ $(document).ready(function () {
 		$(this).closest('.js-modal').removeClass('open_modal');
 		$('body, html').removeClass('no_scroll');
 	});
+
+	//COMMENTS ********************************************************************
+
+	function signalInit() {
+		// init signalr and catch error
+		try {
+			console.log("SignalR start working ....");
+			con = $.connection.chatHub;
+
+		} catch (e) {
+			console.log("ERROR");
+		}
+
+	}
+
+	signalInit();
+
+	// send messages to server with signalr 
+	function sendMessage(text, id, action_type) {
+		$.connection.hub.start().done(function () {
+			con.server.send(id, text, action_type);
+		});
+
+	};
+
+	// if sombody change or add comments then
+	con.client.broadcastMessage = function (id, message, action_type) {
+		var post_path;  
+		if (action_type != 'edit') {
+			post_path = $("#" + id).find('.js-add_comment').data('path');
+			post_block = $("#" + id).find('.post__comments');
+		} else {
+			post_path = $("#" + id).closest('.js-comment_pannel').find('.js-add_comment').data('path');
+			post_block = $("#" + id).closest('.js-comment_pannel').find('.post__comments');
+		}
+		// if comments block is open then
+		if ($.trim(post_block.html()).length) {
+			// detect action type (edit, add, init)
+			if (action_type == 'edit') {
+				$("#" + id).find('.js-edit_area').text(message);
+			} else {
+				var comments = _.template($('#comment_template').html());
+				var creation_date = $("#" + id).find('.js-creation_date').last().data('time');
+				$.ajax({
+					url: "/OData.svc" + post_path + "/Comments?CreationDate gt datetime'" + creation_date + "'&$expand=CreatedBy,Actions",
+					dataType: "json",
+					type: 'GET',
+					context: this,
+					success: function (data) {
+						$("#" + id).find('.post__comments').html(comments({ data: data.d.results }));
+
+						//if (action_type == 'add') {
+						//	$(comments({ data: data.d.results })).addClass("new_comment");
+						//}
+					},
+					error: function (jqXHR, exception, error) {
+						console.log(error);
+					}
+				});
+			}
+		}
+		// change comments count
+		if ($('.js-show_comments').length > 0) {
+			$.ajax({
+				url: "/OData.svc" + post_path + "/Comments?$select=__count",
+				dataType: "json",
+				type: 'GET',
+				context: this,
+				success: function (data) {
+					var comment_obj = $("#" + id).find('.js-comments_count');
+					var current_count = $("#" + id).find('.js-update_count');
+					var post_ount = comment_obj.data('count');
+					var diferrent = data.d.__count - post_ount;
+
+					current_count.text(data.d.__count);
+					comment_obj.attr('data-count', data.d.__count);
+					if (diferrent > 0) {
+						comment_obj.addClass('anim_cc');
+					} else {
+						comment_obj.removeClass('anim_cc');
+
+					}
+				},
+				error: function (jqXHR, exception, error) {
+
+				}
+			});
+		}
+
+	}
+
+	//show hide comments
+	$(document).on('click', '.js-show_comments', function (e) {
+		e.preventDefault();
+		var comments_block = $(this).closest('.js-post_id').find('.js-comment_pannel');
+
+		comments_block.slideToggle(); // slide down/up comments 
+
+		// if comments block is not empty then
+		if (!$.trim(comments_block.find('.post__comments').html()).length) {
+
+			if (comments_block.find('.js-loader').length == 0) {
+				comments_block.append(loader);
+			}
+
+			var comments = _.template($('#comment_template').html());
+			var post_path = $(this).data('path'); // save path to the post 
+
+			$.ajax({
+				url: "/OData.svc" + post_path + "/Comments?$orderby=Id desc&$top=" + COMMENT_SHOW + "&$expand=CreatedBy,Actions,CreatedBy/Actions&metadata=no",
+				dataType: "json",
+				type: 'GET',
+				context: this,
+				success: function (data) {
+					
+					var resultObject = data.d.results;
+					console.log(resultObject);
+					if (resultObject !== undefined) {
+						resultObject.reverse();
+					}
+					$(this).closest('.js-post_id').find('.js-comment_pannel').removeClass('elem--hidden');
+					$(this).closest('.js-post_id').find('.js-loader').remove();
+					$(this).closest('.js-post_id').find('.post__comments').html(comments({ data: resultObject }));
+				},
+				error: function (jqXHR, exception, error) {
+					$(this).closest('.js-post_id').find('.js-comment_pannel').removeClass('elem--hidden');
+					$(this).closest('.js-post_id').find('.js-loader').remove();
+				}
+			});
+		}
+	});
+
+	if ($('.js-post_page').length > 0) {
+		var comments_block = $('.js-comment_pannel');
+		if (comments_block.find('.js-loader').length == 0) {
+			comments_block.find('.js-post__comments').append(loader);
+		}
+		var comments = _.template($('#comment_template').html());
+		var post_path = comments_block.data('path'); // save path to the post 
+		$.ajax({
+			url: "/OData.svc" + post_path + "/Comments?$orderby=Id desc&$top=" + COMMENT_SHOW + "&$expand=CreatedBy,Actions,CreatedBy/Actions",
+			dataType: "json",
+			type: 'GET',
+			async: false,
+			success: function (data) {
+				var resultObject = data.d.results;
+				resultObject.reverse();
+				comments_block.find('.js-loader').remove();
+				comments_block.find('.js-post__comments').html(comments({ data: resultObject }));
+			},
+			error: function (jqXHR, exception, error) {
+				comments_block.find('.js-loader').remove();
+			}
+		});
+	}
+
+	// add new comment
+	$(document).on('keydown', '.js-add_comment', function (e) {
+		if (e.ctrlKey && e.keyCode == 13) {
+			// if pressed Ctrl + enter button combination then
+
+			var comment_textarea = $(this); 
+			var post_path = comment_textarea.data('path');
+			var comment_text = comment_textarea.val();
+			var comment_pos = comment_textarea.closest('.js-comment_pannel').find('.js-post__comments');
+			var comment = _.template($('#comment_add_template').html());
+			var comments_count = comment_textarea.closest('.js-post_id').find('js-comments_count');
+			var post_id = comment_textarea.closest('.js-post_id').attr('id');
+
+			// request to create comment
+			if (comment_text.length != 0) {
+
+				$.ajax({
+					url: "/OData.svc" + post_path + "/Comments?$expand=CreatedBy,Actions",
+					dataType: "json",
+					type: 'POST',
+					async: false,
+					data: JSON.stringify({
+						"Description": comment_text,
+						"__ContentType": "Comment",
+					}),
+					context: this,
+					success: function (data) {
+
+						comment_textarea.val('');
+						comment_pos.append(comment({ data: data.d }));
+						sendMessage(data.d.Description, post_id, "add");
+
+						var count = parseInt($(this).closest('.js-post_id').find('.js-comments_count').attr('data-count')) + 1;
+						$(this).closest('.js-post_id').find('.js-comments_count').attr('data-count', count).text("+");
+						$(this).closest('.js-post_id').find('.js-update_count').text(count);
+
+					},
+					error: function (error) {
+						// if no  comment folder then
+						console.log("no  comments folder");
+						if (error.status == 404) {
+							// request to create comments folder
+							$.ajax({
+								url: "/OData.svc" + post_path,
+								dataType: "json",
+								type: 'POST',
+								data: JSON.stringify({
+									"Name": "Comments",
+									"__ContentType": "SystemFolder",
+								}),
+								success: function (data) {
+									// after folder is created add comment
+									console.log("add comments folder");
+									$.ajax({
+										url: "/OData.svc" + post_path + "/Comments?$expand=CreatedBy,Actions",
+										dataType: "json",
+										type: 'POST',
+										data: JSON.stringify({
+											"Description": comment_text,
+											"__ContentType": "Comment",
+										}),
+										context: this,
+										success: function (data) {
+											comment_textarea.val('');
+											comment_pos.append(comment({ data: data.d }));
+											sendMessage(data.d.Description, post_id, "add");
+
+											var count = parseInt($(this).closest('.js-post_id').find('.js-comments_count').attr('data-count')) + 1;
+											$(this).closest('.js-post_id').find('.js-comments_count').attr('data-count', count).text("+");
+											$(this).closest('.js-post_id').find('.js-update_count').text(count);
+
+										},
+										error: function (error) {
+										}
+									});
+								},
+								error: function (error) {
+									console.log(error);
+								}
+							});
+						}
+					}
+				});
+			}
+		}
+	});
+
+	// END COMMENTS ********************************************************************
 });

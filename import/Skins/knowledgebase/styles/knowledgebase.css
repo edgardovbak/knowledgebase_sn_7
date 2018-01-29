@@ -6,8 +6,8 @@
     4. fonts
     5. global
     6. sidebar
-    7. tablet
-	8. modal
+    7. tablet 
+	8. modal  
     9. new article
     10. tagcloud
 	11. slick
@@ -688,15 +688,14 @@ button {
   .dropdown ul {
     position: absolute;
     top: 100%;
+    right: 5px;
     background-color: #958d82;
-    box-shadow: -2px 1px 4px 0px #000;
+    box-shadow: 2px 1px 4px 0px #000;
     transform: scale(0) translate(100%, -100%);
     transition: all 0.2s ease;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
-    z-index: 100;
-    min-width: 100%;
-    box-sizing: border-box; }
+    z-index: 100; }
     .dropdown ul a {
       display: block;
       padding: 0 10px;
@@ -1035,9 +1034,7 @@ select {
     margin-bottom: 1.3em;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    border-bottom: 1px solid #958d82;
-    padding-bottom: 1.3em; }
+    align-items: flex-start; }
     .post__general__avatar {
       border-radius: 100%;
       overflow: hidden;
@@ -1137,9 +1134,6 @@ select {
       .post__text img.right_pos {
         float: right;
         margin-left: 1rem; }
-      .post__text img.position_center {
-        margin: auto;
-        display: block; }
     .post__text a {
       color: #27d3d2;
       text-decoration: underline;

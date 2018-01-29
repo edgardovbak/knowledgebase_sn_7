@@ -1,28 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentMetaData>
-  <ContentType>Image</ContentType>
-  <ContentName>grunt-logo.png</ContentName>
+  <ContentType>Folder</ContentType>
+  <ContentName>Controls</ContentName>
   <Fields>
-    <DateTaken>0001-01-01T00:00:00</DateTaken>
-    <Index>0</Index>
-    <Binary attachment="grunt-logo.png" />
-    <DisplayName><![CDATA[grunt-logo.png]]></DisplayName>
-    <ModifiedBy>
-      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
-    </ModifiedBy>
-    <ModificationDate>2018-01-11T11:50:09.66</ModificationDate>
-    <PageCount>-4</PageCount>
+    <DisplayName><![CDATA[Controls]]></DisplayName>
     <Owner>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </Owner>
     <Hidden>false</Hidden>
+    <Index>0</Index>
     <EnableLifespan>false</EnableLifespan>
     <ValidFrom>0001-01-01T00:00:00</ValidFrom>
     <ValidTill>0001-01-01T00:00:00</ValidTill>
     <CreatedBy>
       <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
     </CreatedBy>
-    <CreationDate>2018-01-11T11:50:09.66</CreationDate>
+    <CreationDate>2018-01-19T08:18:38.57</CreationDate>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2018-01-19T08:18:38.57</ModificationDate>
     <TrashDisabled>false</TrashDisabled>
     <IsTaggable>false</IsTaggable>
     <IsRateable>false</IsRateable>

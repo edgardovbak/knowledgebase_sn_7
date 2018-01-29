@@ -24,8 +24,38 @@ body.mceForceColors {background:#FFF; color:#000;}
 .sn-richtext h5 {font-size: .83em; margin: 1em 0;}
 .sn-richtext h6 {font-size: .75em; margin: 1em 0;}
 
-.sn-richtext p { margin: 0 0 1em; }
+.sn-richtext p {
+	margin: 0 0 1em;
+}
 .sn-richtext a { color:#007DC6; }
+
+.sn-richtext img {
+	margin: 1rem 0;
+}
+
+#tinymce .left_pos {
+	float: left;
+	margin-right: 1rem;
+}
+
+#tinymce .right_pos {
+	float: right;
+	margin-left: 1rem;
+}
+
+#tinymce a {
+	color: #27d3d2;
+	text-decoration: underline;
+}
+
+
+#tinymce p {
+	font-family: "Fira Sans", sans-serif;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	font-weight: normal;
+	color: #3e3a3b;
+}
 
 .sn-richtext table td, .sn-richtext table th {cursor:text}
 .sn-richtext ins {border-bottom:1px solid green; text-decoration: none; color:green}

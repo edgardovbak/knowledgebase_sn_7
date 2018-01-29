@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>KnowledgeBaseArticle_v_2</ContentType>
+  <ContentName>Havana</ContentName>
+  <Fields>
+    <Body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>Havana, ooh na-na (ay) Half of my heart is in Havana, ooh-na-na (ay, ay) He took me back to East Atlanta, na-na-na Oh, but my heart is in Havana (ay) There's somethin' 'bout his manners (uh huh) Havana, ooh na-na (uh) He didn't walk up with that "how you doin'?" (uh) (When he came in the room) He said there's a lot of girls I can do with (uh) (But I can't without you) I'm doin' forever in a minute (hey) (That summer night in June) And papa says he got malo in him (uh) He got me feelin' like Ooh-ooh-ooh, I knew it when I met him I loved him when I left him Got me feelin' like Ooh-ooh-ooh, and then I had to tell him I had to go, oh na-na-na-na-na</p>
+</body>
+</html>]]></Body>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2018-01-19T09:55:31.65</ModificationDate>
+    <Owner>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </Owner>
+    <DisplayName><![CDATA[Havana ooh na-na (ay)]]></DisplayName>
+    <Hidden>false</Hidden>
+    <Index>0</Index>
+    <EnableLifespan>false</EnableLifespan>
+    <ValidFrom>0001-01-01T00:00:00</ValidFrom>
+    <ValidTill>0001-01-01T00:00:00</ValidTill>
+    <CreatedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </CreatedBy>
+    <CreationDate>2018-01-11T09:20:35.81</CreationDate>
+    <TrashDisabled>false</TrashDisabled>
+    <IsTaggable>false</IsTaggable>
+    <IsRateable>false</IsRateable>
+    <RateAvg>0.0000</RateAvg>
+    <RateCount>0</RateCount>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

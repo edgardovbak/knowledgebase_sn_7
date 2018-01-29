@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>KnowledgeBaseArticle_v_2</ContentType>
+  <ContentName>Walk On Water</ContentName>
+  <Fields>
+    <Body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p><img class="left_pos" style="width: 14%;" src="/Root/Sites/KnowledgeBaseSn7/Posts/2018-01/UploadedImages/grunt-logo.png" />I walk on water But I ain't no Jesus I walk on water But only when it freezes Why, are expectations so high? Is it the bar I set? My arms, I stretch, but I can&rsquo;t reach A far cry from it, or it's in my grasp, but as Soon as I grab, squeeze I lose my grip like the flying trapeze Into the dark, I plummet Now the sky's blackening, I know the mark&rsquo;s high Butterflies rip apart my stomach Knowing that no matter what bars I come with You're gonna hark, gripe, and that's a hard Vicodin to swallow So I scrap these, as pressure increases, like khakis I feel the ice cracking, because I walk on water But I ain't no Jesus I walk on water But only when it freezes It's the curse of the standard That the first of the Mathers disc set Always in&hellip;</p>
+</body>
+</html>]]></Body>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2018-01-22T09:33:47.45</ModificationDate>
+    <Owner>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </Owner>
+    <DisplayName><![CDATA[Walk On Water]]></DisplayName>
+    <Hidden>false</Hidden>
+    <Index>0</Index>
+    <EnableLifespan>false</EnableLifespan>
+    <ValidFrom>0001-01-01T00:00:00</ValidFrom>
+    <ValidTill>0001-01-01T00:00:00</ValidTill>
+    <CreatedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </CreatedBy>
+    <CreationDate>2017-12-04T07:48:18.73</CreationDate>
+    <TrashDisabled>false</TrashDisabled>
+    <IsTaggable>false</IsTaggable>
+    <IsRateable>false</IsRateable>
+    <RateAvg>0.0000</RateAvg>
+    <RateCount>0</RateCount>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

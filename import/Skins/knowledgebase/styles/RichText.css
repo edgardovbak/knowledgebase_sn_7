@@ -30,18 +30,18 @@ body.mceForceColors {background:#FFF; color:#000;}
 	margin: 1rem 0;
 }
 
-#tinymce .left_pos {
-	float: left;
+.sn-richtext .left_pos {
+	float:left;
 	margin-right: 1rem;
 }
-#tinymce .right_pos {
-	float: right;
-	margin-left: 1rem;
+.sn-richtext .right_pos {
+	float:right;
+	margin-left:  1rem;
 }
 
-#tinymce a {
-	color: #27d3d2;
-	text-decoration: underline;
+.sn-richtext a { 
+	color: $cian;
+    text-decoration: underline; 
 }
 
 .sn-richtext table td, .sn-richtext table th {cursor:text}

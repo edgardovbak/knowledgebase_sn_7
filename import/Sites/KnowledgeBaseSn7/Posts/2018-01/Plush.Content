@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>KnowledgeBaseArticle_v_2</ContentType>
+  <ContentName>Plush</ContentName>
+  <Fields>
+    <Body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>And I feel that time's a wasted go<br />So where ya going to tomorrow?<br />And I see that these are lies to come<br />Would you even care?<br />And I feel it<br />And I feel it<br />Where ya going for tomorrow?<br />Where ya going with that mask I found?<br />And I feel, and I feel<br />When the dogs begin to smell her<br />Will she smell alone?<br />And I feel, so much depends on the weather<br />So is it raining in your bedroom?<br />And I see, that these are the eyes of disarray<br />Would you even care?<br />And I feel it<br />And she feels it<br />Where ya going to tomorrow?<br />Where ya going with that mask I found?<br />And I feel, and I feel<br />When the dogs begin to smell her<br />Will she smell alone?<br />When the dogs do find her<br />Got time, time, to wait for tomorrow<br />To find it, to find it, to find it<br />When the dogs do find her</p>
+</body>
+</html>]]></Body>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2018-01-26T10:19:35.39</ModificationDate>
+    <Owner>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </Owner>
+    <DisplayName><![CDATA[Plush]]></DisplayName>
+    <Hidden>false</Hidden>
+    <Index>0</Index>
+    <EnableLifespan>false</EnableLifespan>
+    <ValidFrom>0001-01-01T00:00:00</ValidFrom>
+    <ValidTill>0001-01-01T00:00:00</ValidTill>
+    <CreatedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </CreatedBy>
+    <CreationDate>2018-01-26T10:19:35.39</CreationDate>
+    <TrashDisabled>false</TrashDisabled>
+    <IsTaggable>false</IsTaggable>
+    <IsRateable>false</IsRateable>
+    <RateAvg>0.0000</RateAvg>
+    <RateCount>0</RateCount>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

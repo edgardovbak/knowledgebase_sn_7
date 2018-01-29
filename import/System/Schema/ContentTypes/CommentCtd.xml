@@ -1,0 +1,6 @@
+﻿<ContentType name="Comment" parentType="ListItem" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>$Ctd-Comment,DisplayName</DisplayName>
+  <Description>$Ctd-Comment,Description</Description>
+  <Icon>File</Icon>
+  <Fields></Fields>
+</ContentType>

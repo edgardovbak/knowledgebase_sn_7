@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>KnowledgeBaseArticle_v_2</ContentType>
+  <ContentName>Bush</ContentName>
+  <Fields>
+    <Body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>Breathe in, breathe out, breathe in, breathe out<br />Breathe in<br />Breathe in, breathe out, breathe in, breathe out<br />Breathe in<br />Tied to a wheel fingers got to feel<br />Bleeding through a tar-decay smile<br />I spin on a whim, I slide to the right<br />I felt you like electric light<br />For our love, for our fear<br />For our rise against the years and years and years<br />Got a machinehead, it's better than the rest<br />Green to red machinehead<br />Got a machinehead, it's better than the rest<br />Green to red<br />And I walk from my machine<br />I walk from my machine<br />Breathe in, breathe out, breathe in, breathe out<br />Breathe in<br />Deaf dumb and thirty<br />Starting to deserve this<br />Leaning on my conscience wall<br />Blood is like wine<br />Unconscious all the time<br />If I had it all again<br />I'd change it all</p>
+</body>
+</html>]]></Body>
+    <ModifiedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </ModifiedBy>
+    <ModificationDate>2018-01-26T10:18:32.64</ModificationDate>
+    <Owner>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </Owner>
+    <DisplayName><![CDATA[Bush]]></DisplayName>
+    <Hidden>false</Hidden>
+    <Index>0</Index>
+    <EnableLifespan>false</EnableLifespan>
+    <ValidFrom>0001-01-01T00:00:00</ValidFrom>
+    <ValidTill>0001-01-01T00:00:00</ValidTill>
+    <CreatedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </CreatedBy>
+    <CreationDate>2017-12-05T09:10:03.05</CreationDate>
+    <TrashDisabled>false</TrashDisabled>
+    <IsTaggable>false</IsTaggable>
+    <IsRateable>false</IsRateable>
+    <RateAvg>0.0000</RateAvg>
+    <RateCount>0</RateCount>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>
